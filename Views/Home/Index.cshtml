@@ -1,0 +1,18 @@
+﻿@using UseAPI_Weather_Basic.Molders
+
+@{
+    Weather weather = ViewBag.Weather;
+}
+
+
+
+<h2>Weather today</h2>
+<h2>@weather.location_Infor.nameCity (@weather.location_Infor.country) - @weather.location_Infor.localTime</h2>
+
+<h3>Template: @weather.temp_c ℃</h3>
+<h3>UV index: @weather.uv</h3>
+<h3>Wind speed: @weather.wind_kph km/hour</h3>
+<h3>Cloud cover: @weather.cloud %</h3>
+<h3>Last update: @weather.last_updated</h3>
+
+<p style="color:red">Please write name of city which you want to search on the route: http://localhost:5252/[Name_of_city] (attention, some cities can't display information, because we don't have data about that)</p>
